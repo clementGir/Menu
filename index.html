@@ -1,0 +1,137 @@
+
+  <!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.4/jquery.mobile-1.4.4.min.css">
+    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+
+
+    <meta charset="UTF-8" />
+  </head>
+  <body lang="fr">
+    <div class="nav-container">
+      <button class="more">
+        <div alt="f476" class="genericon genericon-ellipsis" title="genericon-ellipsis"></div>
+      </button>
+
+      <button class="people">
+        <div alt="f304" class="genericon genericon-user" title="genericon-user"></div>
+      </button>
+
+      <button class="time">
+        <div alt="f307" class="genericon genericon-month" title="genericon-month"></div>
+      </button>
+
+      <button class="location">
+        <div alt="f417" class="genericon genericon-location" title="genericon-location"></div>
+      </button>
+    </div>
+    
+    <div class="toShow">
+      <div class="more-content">
+        <div class="tile un"></div>
+        <div class="tile dos"></div>
+        <div class="tile tres"></div>
+        <div class="tile quatro"></div>
+      </div>
+
+      <div class="people-content">
+        <div class="tile un"></div>
+        <div class="tile dos"></div>
+      </div>
+
+      <div class="time-content">
+        <div class="tile un"></div>
+        <div class="tile dos"></div>
+      </div>
+
+      <div class="location-content">
+        <div class="tile un"></div>
+        <div class="tile dos"></div>
+      </div>
+    </div>
+  </body>
+
+  <script type="text/javascript">
+
+if ($(".show").size() <= 0) {
+
+  $(".more").click(function () {
+      
+      if($('button').hasClass('open')) {
+
+          $(this).addClass('close').removeClass('open');
+          $(".more-content").addClass('hidden').removeClass('show');
+
+      }
+      else{
+          $(".people-content, .time-content, .location-content").addClass('hide');
+          $(this).removeClass('close').addClass('open');
+          $(".more-content").removeClass('hidden').addClass('show').removeClass('hide');
+      }
+  });
+   $(".people-content, .time-content, .location-content").removeClass('hide');
+}
+
+if($(".show").size() <= 0) {
+  $(".people").click(function () {
+
+      if($('button').hasClass('open')) {  
+               
+          $(this).addClass('close').removeClass('open');
+          $(".people-content").addClass('hidden').removeClass('show');
+      }
+      else{
+          $(".more-content, .time-content, .location-content").addClass('hide');
+          $(this).removeClass('close').addClass('open');
+          $(".people-content").removeClass('hidden').addClass('show').removeClass('hide');
+      }
+  });
+  $(".more-content, .time-content, .location-content").removeClass('hide');
+}
+
+if($(".show").size() <= 0) {
+  $(".time").click(function () {
+
+      if($('button').hasClass('open')) {       
+          $(this).addClass('close').removeClass('open');
+          $(".time-content").addClass('hidden').removeClass('show');
+
+      }
+      else{
+          $(".more-content, .people-content, .location-content").addClass('hide');
+          $(this).removeClass('close').addClass('open');
+          $(".time-content").removeClass('hidden').addClass('show').removeClass('hide');
+      }
+  });
+ $(".more-content, .people-content, .location-content").removeClass('hide');  
+}
+
+if($(".show").size() <= 0) {
+  $(".location").click(function () {
+    
+      if($('button').hasClass('open')) {      
+          $(this).addClass('close').removeClass('open');
+          $(".location-content").addClass('hidden').removeClass('show');
+
+      }
+      else{
+          $(".more-content, .time-content, .people-content").addClass('hide');
+          $(this).removeClass('close').addClass('open');
+          $(".location-content").removeClass('hidden').addClass('show').removeClass('hide');
+
+      }
+  });
+            $(".more-content, .time-content, .people-content").removeClass('hide'); 
+}
+
+
+
+  </script>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+  <script type="text/javascript"  src='http://cdn.renderedfont.com/js/renderedfont-0.8.min.js#free'></script>
+
+</html>
+
